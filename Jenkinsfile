@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('use job1') {
       steps {
-        build(job: 'test1', quietPeriod: 1)
+        cleanWs(deleteDirs: true)
       }
     }
   }
